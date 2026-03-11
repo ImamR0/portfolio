@@ -182,11 +182,11 @@ const bigProjects = {
       image: require("./assets/images/pjo.png"),
       projectName: "PJO Management System",
       projectDesc:
-        "A workforce management platform for handling PJO registration, transfers, termination, and performance evaluation. Built to improve data accuracy and streamline administrative workflows.",
+        "Enterprise workforce management platform used at PT Amman Mineral. Tech stack: Power Apps • Power Automate • Power BI. Centralized PJO lifecycle management including registration, termination, evaluation, and reporting.",
       footerLink: [
         {
-          name: "Case Study",
-          url: "#"
+          name: "Architecture",
+          url: process.env.PUBLIC_URL + "/pjo-architecture.png"
         }
       ]
     },
