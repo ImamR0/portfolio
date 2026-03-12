@@ -182,7 +182,7 @@ const bigProjects = {
       image: require("./assets/images/pjo.png"),
       projectName: "PJO Management System",
       projectDesc:
-        "Enterprise workforce management platform used at PT Amman Mineral. Tech stack: Power Apps • Power Automate • Power BI. Centralized PJO lifecycle management including registration, termination, evaluation, and reporting.",
+        "Contractor workforce management platform covering registration, evaluation, termination, and reporting in one structured operational workflow.",
       footerLink: [
         {
           name: "Architecture",
@@ -194,11 +194,11 @@ const bigProjects = {
       image: require("./assets/images/vrr.png"),
       projectName: "Vendor Registration Request (VRR)",
       projectDesc:
-        "Centralized vendor onboarding platform enabling full lifecycle tracking of vendor registration from submission to approval. Improved transparency, accountability, and reporting capabilities.",
+        "Vendor onboarding platform covering request submission, verification, approval, and final registration with clearer tracking and reporting.",
       footerLink: [
         {
-          name: "Case Study",
-          url: "#"
+          name: "Architecture",
+          url: process.env.PUBLIC_URL + "/vrr-architecture.png"
         }
       ]
     },
@@ -206,11 +206,11 @@ const bigProjects = {
       image: require("./assets/images/mpmh.png"),
       projectName: "MPMH Calculator",
       projectDesc:
-        "Automated manpower and manhour reporting system that streamlined monthly reporting for contract support teams, including validation, submission, and archiving processes.",
+        "Monthly manpower and manhour reporting platform covering data entry, validation, submission, reporting, and archive control in one structured process.",
       footerLink: [
         {
-          name: "Case Study",
-          url: "#"
+          name: "Architecture",
+          url: process.env.PUBLIC_URL + "/mpmh-architecture.png"
         }
       ]
     }
@@ -381,3 +381,9 @@ export {
   isHireable,
   resumeSection
 };
+
+
+
+
+
+
