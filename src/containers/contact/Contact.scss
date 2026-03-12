@@ -2,6 +2,8 @@
 
 .contact-div-main {
   display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .dark-mode a {
@@ -12,16 +14,28 @@
   flex: 1;
 }
 
+.contact-kicker {
+  margin: 0 0 0.9rem;
+  color: #4f46e5;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .contact-title {
-  font-size: 65px;
-  font-weight: 400;
+  margin: 0;
+  font-size: clamp(2.6rem, 2rem + 2.2vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .contact-detail,
 .contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
-  font-weight: 400;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.5rem);
+  font-weight: 600;
   color: $subTitle;
   text-decoration: none;
 }
@@ -34,10 +48,25 @@
 }
 
 .contact-subtitle {
-  text-transform: uppercase;
+  margin-top: 1rem;
+  text-transform: none;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 620px;
 }
 
 .contact-text-div {
+  margin-top: 1.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.contact-social-wrap {
   margin-top: 1.5rem;
 }
 
@@ -49,25 +78,22 @@
   max-width: 100%;
   height: auto;
   margin-left: 1.5rem;
-  margin-top: -4rem;
 }
 
-/* Media Query */
+.dark-mode.contact-kicker {
+  color: #a5b4fc;
+}
+
+.dark-mode.contact-subtitle,
+.dark-mode.contact-detail,
+.dark-mode.contact-detail-email {
+  color: #cbd5e1;
+}
+
 @media (max-width: 1380px), (max-width: 768px) {
-  .contact-title {
-    font-size: 56px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .contact-title {
-    font-size: 40px;
-    text-align: center;
-  }
-
+  .contact-title,
+  .contact-kicker,
   .contact-subtitle {
-    font-size: 16px;
-    line-height: normal;
     text-align: center;
   }
 
@@ -76,9 +102,8 @@
     margin-top: 1.5rem;
   }
 
-  .contact-detail,
-  .contact-detail-email {
-    font-size: 20px;
+  .contact-actions {
+    justify-content: center;
   }
 
   .contact-image-div {

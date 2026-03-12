@@ -3,26 +3,21 @@
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
 }
 
 .greeting-main {
   display: flex;
-}
-
-.subTitle {
-  color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .greeting-main > * {
@@ -30,27 +25,75 @@
   margin-bottom: 30px;
 }
 
+.greeting-text-card {
+  max-width: 680px;
+}
+
+.greeting-kicker {
+  margin: 0 0 1rem;
+  color: #4f46e5;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
 .empty-div {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 
 .button-greeting-div {
   display: flex;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
+
 .download-link-button {
   text-decoration: none;
 }
 
 .greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
+  margin: 0;
+  font-size: clamp(3rem, 2.2rem + 2.8vw, 5.2rem);
+  line-height: 1.04;
   color: $textColor !important;
+  letter-spacing: -0.04em;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  margin: 1.35rem 0 0;
+  max-width: 640px;
+  font-size: clamp(1.02rem, 0.96rem + 0.36vw, 1.35rem);
+  line-height: 1.75;
+}
+
+.greeting-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.greeting-highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.68rem 0.95rem;
+  background: rgba(79, 70, 229, 0.1);
+  color: #3730a3;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .greeting-image-div > img {
@@ -64,6 +107,20 @@
   animation-name: wave;
   display: inline-block;
   transform-origin: 70% 70%;
+}
+
+.dark-mode.greeting-kicker {
+  color: #a5b4fc;
+}
+
+.dark-mode.greeting-text-p {
+  color: #cbd5e1;
+}
+
+.dark-mode .greeting-highlight-pill,
+.dark-mode.greeting-highlight-pill {
+  background: rgba(99, 102, 241, 0.18);
+  color: #c7d2fe;
 }
 
 @keyframes wave {
@@ -90,31 +147,43 @@
   }
 }
 
-/* Media Query */
 @media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
   .greeting-text-p {
-    font-size: 20px;
+    line-height: 1.65;
   }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
+
+  .greeting-text-card {
+    max-width: 100%;
+  }
+
+  .greeting-kicker {
+    text-align: center;
+    font-size: 0.74rem;
+  }
+
   .greeting-text {
-    font-size: 30px;
     text-align: center;
   }
+
   .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
     text-align: center;
+    line-height: 1.7;
   }
+
+  .greeting-highlights {
+    justify-content: center;
+  }
+
   .greeting-main {
     display: block;
   }
+
   .greeting-image-div {
     height: 256px;
   }

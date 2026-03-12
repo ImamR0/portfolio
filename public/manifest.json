@@ -1,6 +1,6 @@
 {
-  "short_name": "DeveloperFolio",
-  "name": "DeveloperFolio",
+  "short_name": "Imam Portfolio",
+  "name": "Imam Rinjani Portfolio",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#6c63ff",
-  "background_color": "#ffffff"
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a"
 }

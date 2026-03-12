@@ -6,6 +6,7 @@ import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import Button from "../../components/button/Button";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
@@ -14,7 +15,12 @@ export default function Contact() {
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">
-            <h1 className="heading contact-title">{contactInfo.title}</h1>
+            <p className={isDark ? "dark-mode contact-kicker" : "contact-kicker"}>
+              Let&apos;s Connect
+            </p>
+            <h1 className={isDark ? "dark-mode heading contact-title" : "heading contact-title"}>
+              {contactInfo.title}
+            </h1>
             <p
               className={
                 isDark
@@ -24,32 +30,26 @@ export default function Contact() {
             >
               {contactInfo.subtitle}
             </p>
-            <div
-              className={
-                isDark ? "dark-mode contact-text-div" : "contact-text-div"
-              }
-            >
+            <div className={isDark ? "dark-mode contact-text-div" : "contact-text-div"}>
               {contactInfo.number && (
                 <>
-                  <a
-                    className="contact-detail"
-                    href={"tel:" + contactInfo.number}
-                  >
+                  <a className="contact-detail" href={"tel:" + contactInfo.number}>
                     {contactInfo.number}
                   </a>
                   <br />
                   <br />
                 </>
               )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
+              <a className="contact-detail-email" href={"mailto:" + contactInfo.email_address}>
                 {contactInfo.email_address}
               </a>
-              <br />
-              <br />
-              <SocialMedia />
+              <div className="contact-actions">
+                <Button text="Email me" href={"mailto:" + contactInfo.email_address} />
+                <Button text="View LinkedIn" href="https://www.linkedin.com/in/lalu-imam-adiguna-rinjani-8108b324a/" newTab={true} />
+              </div>
+              <div className="contact-social-wrap">
+                <SocialMedia />
+              </div>
             </div>
           </div>
           <div className="contact-image-div">

@@ -1,31 +1,67 @@
 @import "../../_globalColor";
 
+.software-skills-main-div {
+  margin-top: 1.4rem;
+}
+
 .dev-icons {
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
 }
 
 .software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.14);
 }
 
-.software-skill-inline > i {
-  color: $subTitle;
+.skill-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1e293b;
 }
 
-.software-skill-inline > i:hover {
-  color: $skillsColor;
-}
 .software-skill-inline > p {
+  margin: 0;
   color: $subTitle;
-  font-size: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
-.software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+
+.dark-mode .software-skill-inline {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(148, 163, 184, 0.18);
+}
+
+.dark-mode .skill-icon-wrap {
+  background: rgba(15, 23, 42, 0.96);
+  color: #e2e8f0;
+}
+
+.dark-mode .software-skill-inline > p {
+  color: #dbe4f0;
+}
+
+@media (max-width: 768px) {
+  .dev-icons {
+    justify-content: center;
+  }
+
+  .software-skill-inline {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }

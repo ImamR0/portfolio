@@ -29,10 +29,13 @@ export default function Skills() {
         </Fade>
         <Fade right duration={1000}>
           <div className="skills-text-div">
+            <p className={isDark ? "dark-mode skills-kicker" : "skills-kicker"}>
+              Core Capabilities
+            </p>
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
-              {skillsSection.title}{" "}
+              {skillsSection.title}
             </h1>
             <p
               className={
@@ -44,19 +47,18 @@ export default function Skills() {
               {skillsSection.subTitle}
             </p>
             <SoftwareSkill />
-            <div>
+            <div className="skills-list">
               {skillsSection.skills.map((skills, i) => {
                 return (
-                  <p
+                  <div
                     key={i}
                     className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
+                      isDark ? "dark-mode skills-text skills-item" : "skills-text skills-item"
                     }
                   >
-                    {skills}
-                  </p>
+                    <span className="skills-bullet"></span>
+                    <p className={isDark ? "dark-mode subTitle" : "subTitle"}>{skills}</p>
+                  </div>
                 );
               })}
             </div>

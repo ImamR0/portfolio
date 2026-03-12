@@ -1,50 +1,56 @@
+.education-kicker {
+  margin: 0 0 0.9rem;
+  color: #4f46e5;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .education-heading {
-  font-size: 56px;
-  font-weight: 400;
+  margin: 0;
+  font-size: clamp(2.3rem, 1.8rem + 1.8vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.12;
 }
 
 .education-section {
   display: flex;
   flex-direction: column;
   width: 90%;
-  padding: 20px 0px;
-  margin: 0px auto;
+  padding: 20px 0;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
 .education-section > * {
   flex: 1;
-  margin-bottom: 30px;
 }
 
 .education-card-container {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+}
+
+.dark-mode.education-kicker {
+  color: #a5b4fc;
+}
+
+.dark-mode.education-heading {
+  color: #f8fafc;
 }
 
 @media (max-width: 1380px) {
   .education-card-container {
-    padding-top: 0px;
-  }
-  .education-heading {
-    font-size: 40px;
-  }
-  .education-text-subtitle {
-    font-size: 18px;
-    text-align: center;
+    padding-top: 1.2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .education-card-container {
-    padding-top: 0px;
-  }
+  .education-kicker,
   .education-heading {
-    font-size: 30px;
     text-align: center;
-  }
-  .education-text-subtitle {
-    font-size: 16px;
   }
 }
